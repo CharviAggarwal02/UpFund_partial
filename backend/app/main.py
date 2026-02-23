@@ -3,8 +3,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.db import engine, Base, init_db
 from app.logger import logger
 from app.settings import settings
+from app.routes import auth, prediction
 
-# Import models so SQLAlchemy sees them
+app.include_router(auth.router, prefix="/api/auth", tags=["Auth"])
+app.include_router(prediction.router, prefix="/api", tags=["Prediction"])
+
+
+# Import model 
 import app.models.user  # noqa: F401
 
 # Import routers

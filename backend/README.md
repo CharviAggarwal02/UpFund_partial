@@ -1,8 +1,7 @@
-# UpFund Backend (FastAPI + MongoDB)
+# UpFund Backend (FastAPI + SQLite)
 
 ## Prerequisites
 - Python 3.10+
-- MongoDB running (local or Atlas)
 
 ## Setup
 1. Create virtual env and install deps:
